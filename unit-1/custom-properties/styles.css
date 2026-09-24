@@ -1,0 +1,185 @@
+/* ========================================
+   TOKENS
+   Define your design decisions here.
+   Everything else in this file should
+   reference these tokens with var().
+   ======================================== */
+:root {
+    /* Colors: at least primary, background, text, accent */
+    --primary: #0077cc;
+    --secondary: lightblue;
+    --background: #f9f9f9;
+    --text-light: #f9f9f9;
+    --text-dark: black;
+    --accent: darkblue;
+
+    /* Spacing: at least sm, md, lg */
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+
+    /* Typography: font family, base size */
+    --font-family: system-ui, Arial, sans-serif;
+    --font-size: 20px;
+
+    /* Borders: radius */
+    --border-radius: 5px;
+}
+
+/* ========================================
+   RESET
+   A minimal reset so you start clean.
+   ======================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   BASE STYLES
+   Style the body, links, and any raw
+   HTML elements here. Use nesting.
+   ======================================== */
+body {
+    /* font family, color, background, line-height, padding */
+    /* Use clamp() for padding to make it fluid. */
+    font-family: var(--font-family);
+    color: var(--text-light);
+    background-color: var(--background);
+    line-height: var(--spacing-lg);
+    padding: clamp(var(--spacing-sm), 50%, var(--spacing-lg));
+
+    a {
+        /* link color from tokens */
+        color: var(--primary);
+
+        &:hover {
+            /* hover color from tokens */
+            color: var(--accent);
+        }
+    }
+}
+
+/* ========================================
+   NAVIGATION
+   Style .site-nav so students can get
+   back to the homepage.
+   ======================================== */
+.site-nav {
+    /* padding, margin-bottom */
+    padding: clamp(var(--spacing-sm), 50%, var(--spacing-lg));
+    margin-bottom: var(--spacing-md);
+}
+
+/* ========================================
+   BOARD HEADER
+   Style the page header area.
+   ======================================== */
+.board-header {
+    /* text alignment, margin, padding */
+    /* Use clamp() for the h1 font size. */
+    text-align: center;
+    margin: var(--spacing-md);
+    padding: var(--spacing-md);
+
+    h1 {
+        /* fluid font size */
+        font-size: clamp(50px, 50%, 75px);
+        color: var(--accent);
+    }
+
+    p {
+        /* muted text color, spacing */
+        color: var(--text-dark);
+        margin-top: var(--spacing-sm);
+    }
+}
+
+/* ========================================
+   CARD GROUP
+   Each section of cards (This Week,
+   Coming Up, Announcements).
+   ======================================== */
+.card-group {
+    /* margin-bottom using a token */
+    margin-bottom: var(--spacing-md);
+    h2 {
+        /* section heading styles */
+        font-size: var(--font-size);
+        color: var(--primary);
+    }
+}
+
+/* ========================================
+   CARDS GRID
+   Layout the .cards container as a
+   responsive grid or flex layout.
+   ======================================== */
+.cards {
+    /* display, gap (use calc to derive from a token), columns */
+    display: grid;
+    gap: calc(var(--spacing-md) * 2);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ========================================
+   INDIVIDUAL CARD
+   Style each .card article. This is where
+   most of your nesting will happen.
+   ======================================== */
+.card {
+    /* background, padding, border-radius, shadow */
+    /* Use a var() with a fallback value here. */
+    background-color: var(--accent, black);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
+    .card-tag {
+        /* small label: font-size, padding, background, border-radius */
+        font-size: var(--font-size-sm);
+        padding: var(--spacing-xs);
+        background-color: var(--background);
+        border-radius: var(--border-radius);
+        color: var(--text-dark);
+    }
+
+    h3 {
+        /* card title styles */
+        font-size: var(--font-size);
+    }
+
+    p {
+        /* card body text */
+        color: var(--text-light);
+    }
+
+    .card-meta {
+        /* bottom row: flexbox with space-between */
+        /* style the span and link inside here with nesting */
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            color: var(--text-light);
+        }
+        a {
+            color: var(--secondary);
+        }
+    }
+}
+
+/* ========================================
+   FOOTER
+   Style the .board-footer at the bottom.
+   ======================================== */
+.board-footer {
+    /* text alignment, padding, muted color, top border */
+    text-align: center;
+    padding: var(--spacing-md);
+    color: var(--text-dark);
+    border-top: 1px solid var(--accent);
+}
