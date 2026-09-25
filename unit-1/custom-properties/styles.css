@@ -20,7 +20,9 @@
 
     /* Typography: font family, base size */
     --font-family: system-ui, Arial, sans-serif;
-    --font-size: 20px;
+    --font-size-sm: 20px;
+    --font-size-md: 50px;
+    --font-size-lg: 75px;
 
     /* Borders: radius */
     --border-radius: 5px;
@@ -87,7 +89,7 @@ body {
 
     h1 {
         /* fluid font size */
-        font-size: clamp(50px, 50%, 75px);
+        font-size: clamp(var(--font-size-md), 50%, var(--font-size-lg));
         color: var(--accent);
     }
 
@@ -108,7 +110,7 @@ body {
     margin-bottom: var(--spacing-md);
     h2 {
         /* section heading styles */
-        font-size: var(--font-size);
+        font-size: var(--font-size-md);
         color: var(--primary);
     }
 }
@@ -149,7 +151,7 @@ body {
 
     h3 {
         /* card title styles */
-        font-size: var(--font-size);
+        font-size: var(--font-size-md);
     }
 
     p {
