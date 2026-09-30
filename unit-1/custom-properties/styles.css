@@ -20,9 +20,10 @@
 
     /* Typography: font family, base size */
     --font-family: system-ui, Arial, sans-serif;
-    --font-size-sm: 20px;
-    --font-size-md: 50px;
-    --font-size-lg: 75px;
+    --font-size-sm: 15px;
+    --font-size-md: 25px;
+    --font-size-lg: 35px;
+    --font-size-xl: 75px;
 
     /* Borders: radius */
     --border-radius: 5px;
@@ -89,7 +90,7 @@ body {
 
     h1 {
         /* fluid font size */
-        font-size: clamp(var(--font-size-md), 50%, var(--font-size-lg));
+        font-size: clamp(var(--font-size-lg), 50%, var(--font-size-xl));
         color: var(--accent);
     }
 
