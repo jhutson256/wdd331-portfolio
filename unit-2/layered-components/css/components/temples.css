@@ -2,3 +2,48 @@
    Style the status badges differently based on class (.open, .construction). */
 
 /* TODO: Style the temple list */
+
+.temple-list {
+   background-color: var(--color-accent);
+   color: var(--color-background);
+   padding: var(--spacing-md);
+
+   .temples {
+      text-align: center;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(var(--spacing-sm), 5vw, var(--spacing-md));
+      padding-top: clamp(var(--spacing-sm), 1vw, var(--spacing-md));
+      padding-bottom: clamp(var(--spacing-sm), 1vw, var(--spacing-md));
+      background-color: var(--color-accent);
+
+      li {
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+         padding-left: clamp(var(--spacing-sm), 1vw, var(--spacing-md));
+         padding-right: clamp(var(--spacing-sm), 1vw, var(--spacing-md));
+      }
+   }
+
+   .temple-name {
+      font-size: clamp(var(--font-size-md), 5vw, var(--font-size-lg));
+   }
+
+   .temple-status {
+      font-size: clamp(var(--font-size-sm), 5vw, var(--font-size-md));
+      padding: clamp(var(--spacing-sm), 1vw, var(--spacing-md));
+      border-radius: var(--border-radius);
+
+      &.open {
+         background-color: var(--color-primary);
+         color: var(--color-text);
+      }
+
+      &.construction {
+         background-color: var(--color-background);
+         color: var(--color-text);
+      }
+   }
+}
