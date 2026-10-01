@@ -2,3 +2,40 @@
    Use native nesting. Add :focus-visible styles to all inputs. */
 
 /* TODO: Style the form components */
+.study-note {
+  background-color: var(--color-accent);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs, 0.5rem);
+
+  h2 {
+    color: var(--color-background);
+  }
+
+  .note-form {
+
+    .form-field {
+      background-color: var(--color-primary);
+      display: flex;
+      flex-direction: column;
+
+      & :is(input, textarea, select) {
+        /* Ensures the element shrinks fluidly with its container */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        padding: var(--spacing-sm);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius);
+        font-family: var(--font-family);
+        resize: vertical;
+
+        &:focus-visible {
+          outline: 2px solid var(--color-accent);
+        }
+      }
+    }
+  }
+}

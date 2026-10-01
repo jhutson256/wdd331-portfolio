@@ -2,3 +2,43 @@
    Style the active link using aria-current. */
 
 /* TODO: Style the navigation */
+
+.site-nav {
+   margin: var(--spacing-md);
+
+   a {
+      text-decoration: none;
+      color: var(--color-text);
+      font-size: var(--font-size-md);
+      padding: clamp(var(--spacing-sm), 1vw, var(--spacing-md));
+      transition: color 0.3s ease;
+      transition: background-color 0.3s ease;
+      background-color: var(--color-primary);
+
+      &:hover {
+         color: var(--color-background);
+         background-color: var(--color-accent);
+      }
+   }
+   
+   ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-sm);
+      text-align: center;
+      margin-top: var(--spacing-md);
+
+      li {
+         margin-top: var(--spacing-md);
+         
+         a {
+            
+            &[aria-current] {
+               background-color: var(--color-accent);
+               color: var(--color-background);
+            }
+         }
+      }
+   }
+}
