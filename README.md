@@ -24,6 +24,9 @@ in the console to run the bundler and update the bundled CSS file automatically
 after saving files. Otherwise, type npm run build to run the bundler after making 
 all of your changes.
 
+## Site Directory
+
+```text
 [portfolio]
 ├── css/
 │   ├── base/
@@ -46,21 +49,21 @@ all of your changes.
 │       ├── index.html
 │       └── css/
 │           ├── base/
-│           │   ├── elements.css      # Update
-│           │   └── reset.css         # Update
+│           │   ├── elements.css      
+│           │   └── reset.css         
 │           ├── components/
-│           │   ├── buttons.css       # Update
-│           │   ├── cards.css         # Update
-│           │   ├── forms.css         # Update
-│           │   ├── nav.css           # Update
-│           │   └── temples.css       # Update
+│           │   ├── buttons.css       
+│           │   ├── cards.css         
+│           │   ├── forms.css         
+│           │   ├── nav.css           
+│           │   └── temples.css       
 │           ├── layout/
 │           │   └── primary.css
 │           ├── tokens/
-│           │   ├── colors.css        # Update
-│           │   └── variables.css     # Update
+│           │   ├── colors.css        
+│           │   └── variables.css     
 │           ├── utilities/
-│           │   └── utilities.css     # Update
+│           │   └── utilities.css     
 │           └── main.css
     └── lightning-css-demo/
 │       ├── index.html
@@ -91,4 +94,5 @@ all of your changes.
 ├── .gitignore
 |── package.json                  
 ├── index.html                      
-└── README.md                       
+└── README.md   
+```                    
