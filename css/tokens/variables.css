@@ -1,0 +1,11 @@
+:root {
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    --width: 75%;
+    --font-body: system-ui, -apple-system, sans-serif;
+    --font-sm: 0.5rem;
+    --font-md: 1rem;
+    --font-lg: 2rem;
+    --border-radius: 0.5rem;
+}
