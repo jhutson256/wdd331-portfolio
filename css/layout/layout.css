@@ -1,0 +1,19 @@
+main {
+
+    h2 {
+        margin-top: var(--space-lg);
+        margin-bottom: var(--space-md);
+        font-size: var(--font-lg);
+        
+    }
+
+    div {
+        width: var(--width);
+        background-color: var(--color-primary);
+        margin: 0 auto;
+        margin-top: var(--space-md);
+        margin-bottom: var(--space-md);
+        padding: var(--space-sm);
+        line-height: var(--space-md);
+    }
+}
