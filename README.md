@@ -16,3 +16,79 @@ every push to main.
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
+
+## Bundler
+
+This repository uses LightningCSS to bundle CSS files. Type npm run watch 
+in the console to run the bundler and update the bundled CSS file automatically
+after saving files. Otherwise, type npm run build to run the bundler after making 
+all of your changes.
+
+[portfolio]
+├── css/
+│   ├── base/
+│   │   ├── elements.css            
+│   │   └── reset.css               
+│   ├── components/
+│   ├── layout/
+│   ├── tokens/
+│   │   ├── colors.css              
+│   │   └── variables.css           
+│   ├── utilities/
+│   │   └── utilities.css           
+│   └── main.css
+├── unit-1/
+│   └── custom-properties/
+│       ├── index.html                  
+│       └── styles.css                  
+├── unit-2/
+│   └── layered-components/
+│       ├── index.html
+│       └── css/
+│           ├── base/
+│           │   ├── elements.css      # Update
+│           │   └── reset.css         # Update
+│           ├── components/
+│           │   ├── buttons.css       # Update
+│           │   ├── cards.css         # Update
+│           │   ├── forms.css         # Update
+│           │   ├── nav.css           # Update
+│           │   └── temples.css       # Update
+│           ├── layout/
+│           │   └── primary.css
+│           ├── tokens/
+│           │   ├── colors.css        # Update
+│           │   └── variables.css     # Update
+│           ├── utilities/
+│           │   └── utilities.css     # Update
+│           └── main.css
+    └── lightning-css-demo/
+│       ├── index.html
+│       └── css/
+|         │   ├── base/
+|         │   │   ├── elements.css
+|         │   │   └── reset.css
+|         │   ├── components/
+|         │   │   └── card.css
+|         │   ├── layout/
+|         │   │   ├── chrome.css
+|         │   │   └── primary.css
+|         │   ├── tokens/
+|         │   │   ├── colors.css
+|         │   │   └── variables.css
+|         │   ├── utilities/
+|         │   │   └── utilities.css
+|         │   └── main.css
+|         ├── dist/
+|         │   └── styles.css
+|         ├── node_modules/
+|         ├── .gitignore
+|         ├── index.html
+|         └── package.json            
+├── dist/
+│   └── styles.css
+├── node_modules/
+├── .gitignore
+|── package.json                  
+├── index.html                      
+└── README.md                       
