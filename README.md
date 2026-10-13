@@ -24,22 +24,29 @@ in the console to run the bundler and update the bundled CSS file automatically
 after saving files. Otherwise, type npm run build to run the bundler after making 
 all of your changes.
 
+## Light and Dark Modes
+
+The site supports light and dark mode. The color tokens are located in ./css/tokens/
+colors.css.
+
 ## Site Directory
 
 ```text
 [portfolio]
 ├── css/
 │   ├── base/
-│   │   ├── elements.css            
-│   │   └── reset.css               
+│   │   ├── elements.css
+│   │   └── reset.css
 │   ├── components/
+│   │   └── theme-toggle.css  
 │   ├── layout/
 │   ├── tokens/
-│   │   ├── colors.css              
-│   │   └── variables.css           
+│   │   ├── colors.css        
+│   │   └── variables.css     
 │   ├── utilities/
-│   │   └── utilities.css           
-│   └── main.css
+│   └── main.css              
+├── js/
+│   └── theme-preference.js
 ├── unit-1/
 │   └── custom-properties/
 │       ├── index.html                  

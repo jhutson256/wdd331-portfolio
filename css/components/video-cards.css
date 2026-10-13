@@ -1,0 +1,29 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+
+    h3 {
+        margin-bottom: var(--spacing-md);
+    }
+
+    div {
+        width: var(--width-sm);
+
+        p {
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        div {
+            width: var(--width-lg);
+        }
+
+        section {
+            flex-direction: column;
+        }
+    }
+}
