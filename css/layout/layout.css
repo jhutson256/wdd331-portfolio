@@ -1,23 +1,28 @@
-header {
+nav {
+    padding: var(--spacing-xl);
+
+    div {
+        display: flex;
+        justify-content: flex-end;
+    }
 
     h1 {
-        font-size: var(--font-lg);
-        margin: var(--space-sm);
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-xl);
     }
 
     ul {
         display: flex;
-        gap: var(--space-sm);
+        gap: var(--spacing-sm);
         list-style: none;
         justify-content: center;
 
         a {
             background-color: var(--color-accent);
-            color: var(--color-bg);
             transition: color 0.3s ease;
             transition: background-color 0.3s ease;
-            padding: var(--space-sm);
-            border-radius: var(--border-radius);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-md);
 
             &:hover {
                 background-color: var(--color-bg);
@@ -28,21 +33,34 @@ header {
 }
 
 main {
+    margin: var(--spacing-xl);
 
     h2 {
-        margin-top: var(--space-lg);
-        margin-bottom: var(--space-md);
-        font-size: var(--font-lg);
-        
+        padding: var(--spacing-xl);
+        font-size: var(--font-size-lg);
     }
 
     div {
-        width: var(--width);
-        background-color: var(--color-primary);
+        width: var(--width-md);
+        background-color: var(--color-accent);
         margin: 0 auto;
-        margin-top: var(--space-md);
-        margin-bottom: var(--space-md);
-        padding: var(--space-sm);
-        line-height: var(--space-md);
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        padding: var(--spacing-sm);
+        line-height: var(--spacing-lg);
+
+        img {
+            width: var(--width-md);
+        }
+
+        p {
+            padding: var(--spacing-lg);
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        div {
+            width: var(--width-lg);
+        }
     }
 }
