@@ -72,7 +72,7 @@ colors.css.
 │           ├── utilities/
 │           │   └── utilities.css     
 │           └── main.css
-    └── lightning-css-demo/
+    └── css-bundling/
 │       ├── index.html
 │       └── css/
 |         │   ├── base/
@@ -92,9 +92,13 @@ colors.css.
 |         ├── dist/
 |         │   └── styles.css
 |         ├── node_modules/
+|         |── package.json
 |         ├── .gitignore
 |         ├── index.html
-|         └── package.json            
+|         └── package.json   
+    └── demos/
+│         ├── index.html                  
+│         └── styles.css            
 ├── dist/
 │   └── styles.css
 ├── node_modules/
