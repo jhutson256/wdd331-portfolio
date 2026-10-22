@@ -198,7 +198,6 @@ nav {
         .overlay {
             display: block;
             width: var(--width-lg);
-            height: auto;
             border-radius: var(--radius-sm);
         }
 
