@@ -32,4 +32,21 @@
     --width-sm: 30%;
     --width-md: 75%;
     --width-lg: 100%;
+
+    /* Shadows */
+    --shadow-sm:
+        0 2px 4px light-dark(oklch(0.15 0.08 250 / 0.25), oklch(1 0 0 / 0.08)),
+        0 4px 8px light-dark(oklch(0.15 0.08 250 / 0.15), oklch(1 0 0 / 0.04));
+    
+    --shadow-md:
+        0 4px 12px light-dark(oklch(0.15 0.08 250 / 0.3), oklch(1 0 0 / 0.12)),
+        0 8px 24px light-dark(oklch(0.15 0.08 250 / 0.15), oklch(1 0 0 / 0.06)),
+        0 0 0 1px light-dark(rgba(0,0,0,0.05), oklch(1 0 0 / 0.25));
+    
+    --shadow-lg:
+        0 8px 24px light-dark(oklch(0.15 0.08 250 / 0.35), oklch(1 0 0 / 0.18)),
+        0 16px 48px light-dark(oklch(0.15 0.08 250 / 0.2), oklch(1 0 0 / 0.08)),
+        0 0 0 1px light-dark(rgba(0,0,0,0.08), oklch(1 0 0 / 0.4));
+
+    --text-shadow: 0 2px 4px light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
 }
