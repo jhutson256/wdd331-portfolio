@@ -16,6 +16,7 @@ every push to main.
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
+- [Visual Effects](unit-3/visual-effects/index.html)
 
 ## Bundler
 
@@ -38,12 +39,16 @@ colors.css.
 │   │   ├── elements.css
 │   │   └── reset.css
 │   ├── components/
+│   │   ├── video-cards.css
+│   │   ├── effects.css
 │   │   └── theme-toggle.css  
 │   ├── layout/
+│   │   └── layout.css
 │   ├── tokens/
 │   │   ├── colors.css        
 │   │   └── variables.css     
 │   ├── utilities/
+│   │   └── utilities.css
 │   └── main.css              
 ├── js/
 │   └── theme-preference.js
@@ -92,18 +97,21 @@ colors.css.
 |         ├── dist/
 |         │   └── styles.css
 |         ├── node_modules/
-|         |── package.json
+|         ├── package.json
 |         ├── .gitignore
 |         ├── index.html
 |         └── package.json   
     └── demos/
 │         ├── index.html                  
-│         └── styles.css            
+│         └── styles.css  
+├── unit-3/
+│   └── visual-effects/
+│       └── index.html           
 ├── dist/
 │   └── styles.css
 ├── node_modules/
 ├── .gitignore
-|── package.json                  
+├── package.json            
 ├── index.html                      
 └── README.md   
 ```                    

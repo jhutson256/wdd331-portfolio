@@ -1,4 +1,4 @@
-section {
+#video-content {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-xl);
@@ -9,7 +9,7 @@ section {
         margin-bottom: var(--spacing-md);
     }
 
-    div {
+    .video-cards {
         width: var(--width-sm);
 
         p {
@@ -18,11 +18,11 @@ section {
     }
 
     @media screen and (max-width: 800px) {
-        div {
+        #about-me, .video-cards {
             width: var(--width-lg);
         }
 
-        section {
+        #video-content {
             flex-direction: column;
         }
     }

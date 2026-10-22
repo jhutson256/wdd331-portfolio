@@ -1,0 +1,278 @@
+/* 
+2. Style the Hero Section
+    The hero section needs at least two visual effects working together. Use a gradient overlay on top of the background image (a radial vignette, a directional fade, or a semi-transparent color wash) and add a text-shadow to the heading so it remains legible over the image. Consider how both effects should adapt in dark mode.
+3. Style the Elevation Cards
+    Apply your shadow tokens to the cards. Add a hover state that transitions to a higher elevation level so the card feels like it lifts when the user interacts with it. At least one card should include a filter treatment on its image (grayscale, sepia, brightness, or similar) that changes on hover. Use your existing color tokens for the card background and text so they flip correctly in dark mode.
+4. Build the Frosted Glass Panel
+    Style the glass section so the background image sits behind the panel and the panel uses backdrop-filter with blur() and saturate() to create a frosted glass effect. Give the panel a semi-transparent background using light-dark() so it adapts to both themes. Add a prefers-reduced-motion fallback that replaces the blur with a solid background for users who have requested reduced motion.
+5. Style the Icon Row
+    Apply drop-shadow() to the icons so the shadow follows their actual shape. Experiment with stacking multiple drop-shadow() calls for a thicker outline effect. Make sure the shadow color works in both light and dark mode. Consider using currentColor so the shadow automatically follows the inherited text color.
+6. Apply a Choose Topic Technique
+    If you completed a choose topic this unit, add a new section to the page that demonstrates at least one technique from it. Add whatever HTML you need and write the CSS in your effects.css file. If you did not complete a choose topic, skip this step
+*/
+
+nav {
+    a {
+        color: var(--color-text);
+    }
+}
+
+.hero {
+    display: grid;
+    grid-template-areas: "hero-stack";
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .hero-image,
+    .hero-content {
+        grid-area: hero-stack;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-content {
+        z-index: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        background: light-dark(
+            linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5)),
+            linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7))
+        );
+    }
+
+    h1, p {
+        text-shadow: var(--text-shadow);
+    }
+
+    p {
+        color: var(--color-text);
+    }
+}
+    
+
+.card-section {
+    display: block;
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+        width: var(--width-lg);
+        justify-content: center;
+        background-color: var(--color-bg);
+
+        .card {
+            width: var(--width-sm);
+            padding: 0;
+            box-shadow: var(--shadow-md);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            background-color: var(--color-accent);
+
+            img {
+                filter: sepia(80%);
+
+                &:hover {
+                    filter: sepia(0%);
+                }
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-lg);
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+
+            .card {
+                width: var(--width-lg)
+            }
+        }
+    }
+}
+
+.glass-section {
+    position: relative;
+    display: grid;
+    grid-template-areas: "glass-stack";
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+
+    .glass-background {
+        background-color: var(--color-bg);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .glass-background,
+    .glass-panel {
+        grid-area: glass-stack;
+        width: 100%;
+        height: 100%;
+    }
+
+    .glass-panel {
+        z-index: 1;
+        align-self: center;
+        justify-self: center;
+        width: 80%;
+        max-width: 600px;
+        padding: 2.5rem;
+        border-radius: 8px;
+        backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid light-dark(oklch(1 0 0 / 0.4), oklch(1 0 0 / 0.1));
+        
+        background: light-dark(
+            oklch(1 0 0 / 0.65), 
+            oklch(0.18 0.02 260 / 0.65)
+        );
+
+        p {
+            color: var(--color-text);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .glass-section .glass-panel {
+            backdrop-filter: none;
+            background: light-dark(oklch(1 0 0), oklch(0.2 0.02 260));
+        }
+    }
+}
+
+.icon-section {
+    
+    p {
+        color: var(--color-text);
+    }
+
+    .icon-row {
+        display: flex;
+
+        .icon-item {
+            filter: 
+                drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3))
+                drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3))
+                drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
+        }
+    }
+}
+
+.blend-showcase {
+    color: var(--color-text);
+
+    .blend-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-md);
+    }
+
+    .demo {
+        isolation: isolate;
+        position: relative;
+        background: linear-gradient(135deg, oklch(0.5 0.2 30), oklch(0.4 0.2 280));
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+
+        h3 {
+            text-shadow: var(--text-shadow);
+            margin-bottom: var(--spacing-sm);
+            z-index: 2;
+            position: relative;
+        }
+
+        .overlay {
+            display: block;
+            width: var(--width-lg);
+            height: auto;
+            border-radius: var(--radius-sm);
+        }
+
+        &.demo-multiply {
+            .overlay {
+                mix-blend-mode: multiply;
+            }
+        }
+
+        &.demo-screen { 
+            .overlay {
+                mix-blend-mode: screen;
+            }
+        }
+
+        &.demo-overlay {
+            .overlay {
+                mix-blend-mode: overlay;
+            }
+        }
+    }
+}
+
+.background-blend-mode {
+    margin: 0 auto;
+    margin-bottom: var(--spacing-md);
+    width: var(--width-md);
+    height: 500px; 
+    background:
+        linear-gradient(to right, oklch(0.5 0.2 30), oklch(0.4 0.2 280)),
+        url('https://picsum.photos/seed/hero-effects/1200/500') center / cover;
+    background-blend-mode: overlay;
+
+    h3 {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+}
+
+.relative-demo {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.5); 
+    position: relative;
+    margin-bottom: var(--spacing-md);
+    width: var(--width-md);
+
+    h3 {
+        margin-bottom: var(--spacing-sm);
+        color: var(--color-text);
+    }
+    
+    .overlay {
+        mix-blend-mode: multiply;
+    }
+}
+
+.isolate-demo {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.5); 
+    isolation: isolate;
+    width: var(--width-md);
+
+    h3 {
+        margin-bottom: var(--spacing-sm);
+        color: var(--color-text);
+    }
+
+    .overlay {
+        mix-blend-mode: multiply;
+    }
+}
+
+footer {
+    p {
+        color: var(--color-text);
+    }
+}
