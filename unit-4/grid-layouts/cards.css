@@ -1,0 +1,40 @@
+header {
+    margin: var(--spacing-xl);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    gap: var(--spacing-lg);
+
+    .card {
+        color: var(--color-bg);
+        display: flex;
+        flex-direction: column;
+        height: var(--height-lg);
+
+        .overlay {
+            width: var(--width-lg);
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            a {
+                margin-top: auto;
+                background-color: var(--color-bg);
+                color: var(--color-text);
+                
+                &:hover {
+                    background-color: var(--color-accent);
+                    color: var(--color-bg);
+                }
+            }
+        }
+    }
+}

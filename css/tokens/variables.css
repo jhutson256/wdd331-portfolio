@@ -33,6 +33,11 @@
     --width-md: 75%;
     --width-lg: 100%;
 
+    /* Element Height */
+    --height-sm: 30%;
+    --height-md: 75%;
+    --height-lg: 100%;
+
     /* Shadows */
     --shadow-sm:
         0 2px 4px light-dark(oklch(0.15 0.08 250 / 0.25), oklch(1 0 0 / 0.08)),
