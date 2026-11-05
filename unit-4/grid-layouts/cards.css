@@ -5,6 +5,8 @@ header {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    grid-template-rows: auto 1fr auto;
+    
     gap: var(--spacing-lg);
 
     .card {
@@ -12,6 +14,12 @@ header {
         display: flex;
         flex-direction: column;
         height: var(--height-lg);
+
+        @supports (grid-template-rows: subgrid) {
+            grid-row: span 3;
+            display: grid;
+            grid-template-rows: subgrid;
+        }
 
         .overlay {
             width: var(--width-lg);

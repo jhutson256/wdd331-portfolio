@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Anchor Positioning Demo</title>
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="demo.css">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const anchor = document.getElementById('anchorElement');
+                let isDragging = false;
+
+                anchor.addEventListener('pointerdown', (e) => {
+                    isDragging = true;
+                    anchor.setPointerCapture(e.pointerId);
+                });
+
+                anchor.addEventListener('pointermove', (e) => {
+                    if (!isDragging) return;
+                    anchor.style.position = 'fixed';
+                    anchor.style.left = `${e.clientX - (anchor.offsetWidth / 2)}px`;
+                    anchor.style.top = `${e.clientY - (anchor.offsetHeight / 2)}px`;
+                });
+
+                anchor.addEventListener('pointerup', (e) => {
+                    isDragging = false;
+                    anchor.releasePointerCapture(e.pointerId);
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <header class="site-header">
+            <h1>CSS Anchor Positioning & Fallbacks Demo</h1>
+        </header>
+
+        <main class="demo-container">
+
+            <section class="viewport-box">
+
+                <button class="anchor-btn" id="anchorElement">
+                    Anchor Element
+                </button>
+
+                <div class="tooltip-popup" id="tooltipElement">
+                    <p>This tooltip uses CSS Anchor Positioning and automatic try-fallbacks!</p>
+                </div>
+
+            </section>
+        </main>
+
+    </body>
+</html>
