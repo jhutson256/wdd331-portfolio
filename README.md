@@ -19,6 +19,8 @@ every push to main.
 - [Visual Effects](unit-3/visual-effects/index.html)
 - [Grid Layouts - Cards](unit-4/grid-layouts/cards.html)
 - [Grid Layouts - Editorial](unit-4/grid-layouts/editorial.html)
+- [Grid Layouts Advanced - Container](unit-4/advanced/container-demo.html)
+- [Grid Layouts Advanced - Sticky](unit-4/advanced/sticky-demo.html)
 
 ## Bundler
 
@@ -103,18 +105,24 @@ colors.css.
 |         ├── .gitignore
 |         ├── index.html
 |         └── package.json   
-    └── demos/
+    └── demo/
 │         ├── index.html                  
 │         └── styles.css  
 ├── unit-3/
 │   └── visual-effects/
 │       └── index.html   
 ├── unit-4/
-│   └── grid-layouts/
-│       ├── editorial.html
-│       ├── editorial.css 
-│       ├── cards.html    
-│       └── cards.css                   
+│   ├── grid-layouts/
+│   │   ├── cards.html
+│   │   └── cards.css
+│   └── advanced/
+│       ├── container-demo.html
+│       ├── container-demo.css 
+│       ├── sticky-demo.html   
+│       └── sticky-demo.css  
+    └── demo/
+│       ├── demo.html   
+│       └── demo.css                   
 ├── dist/
 │   └── styles.css
 ├── node_modules/

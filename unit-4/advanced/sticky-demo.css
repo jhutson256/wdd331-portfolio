@@ -1,0 +1,47 @@
+/* Layout context */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 415px 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    margin: 0 auto;
+    overflow: hidden; /* This is the bug */
+    overflow: visible; /* This is the fix */
+
+    /* 
+      OVERFLOW BUG:
+      If you add overflow with anything other than visible, sticky positioning on 
+      .sticky-sidebar breaks.
+      
+      WHY IT BREAKS & HOW TO FIX IT:
+      Because the ancestor with overflow other than visible applied becomes the sticky 
+      element's scroll container. You must remove or change the overflow value to visible 
+      on the ancestor element to fix the sticky positioning.
+    */
+
+    .sticky-sidebar {
+        position: sticky;
+        top: var(--spacing-lg);
+        align-self: start;
+    }
+
+    .demo-section {
+        min-height: 60vh;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 100px 1fr;
+
+        .sticky-sidebar {
+            position: sticky;
+            top: 0;
+            width: var(--width-lg);
+        }
+
+        .demo-section {
+            min-height: auto;
+            margin-bottom: var(--spacing-md);
+        }
+    }
+}

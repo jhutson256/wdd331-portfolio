@@ -1,0 +1,28 @@
+.site-header h1 {
+    padding: var(--spacing-lg);
+}
+
+.anchor-btn {
+    anchor-name: --my-anchor;
+    margin: 100px auto;
+    display: block;
+}
+
+.tooltip-popup {
+    position: absolute;
+    position-anchor: --my-anchor;
+    position-area: top;
+    position-try-fallbacks:
+        bottom,
+        left,
+        right;
+    max-width: var(--width-md);
+}
+
+/* .tooltip-popup {
+    position: absolute;
+    position-anchor: --my-anchor;
+    bottom: calc(anchor(top) - 12px);
+    left: anchor(center);
+    translate: -50% 0;
+} */
