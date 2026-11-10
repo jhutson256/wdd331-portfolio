@@ -7,7 +7,6 @@ nav {
     }
 
     h1 {
-        font-size: var(--font-size-lg);
         margin-bottom: var(--spacing-xl);
     }
 
@@ -39,7 +38,6 @@ main {
 
     h2 {
         padding: var(--spacing-xl);
-        font-size: var(--font-size-lg);
     }
 
     div {
