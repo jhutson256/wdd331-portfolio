@@ -34,6 +34,10 @@ all of your changes.
 The site supports light and dark mode. The color tokens are located in ./css/tokens/
 colors.css.
 
+## Typography
+
+This site uses the Anton font from Google Fonts. The typography tokens can be found at the top of the variables.css file located here: [Tokens](css/tokens/variables.css)
+
 ## Site Directory
 
 ```text
