@@ -129,6 +129,11 @@ This site uses the Anton font from Google Fonts. The typography tokens can be fo
 │       └── demo.css                   
 ├── dist/
 │   └── styles.css
+├── fonts/
+    └── Anton/
+│         ├── Anton/Anton-Regular.subset.ttf    
+│         ├── Anton/Anton-Regular.ttf              
+│         └── OFL.txt  
 ├── node_modules/
 ├── .gitignore
 ├── package.json            
