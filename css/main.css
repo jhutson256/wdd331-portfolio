@@ -11,6 +11,8 @@
 @import url('./components/theme-toggle.css') layer(components);
 @import url('./components/video-cards.css') layer(components);
 @import url('./components/effects.css') layer(components);
+@import url('./components/resume.css') layer(components);
+@import url('./components/contact.css') layer(components);
 
 @import url('./utilities/utilities.css') layer(utilities);
 
@@ -29,4 +31,70 @@
     font-style: normal;
     font-display: swap;
     unicode-range: U+0000-00FF;
+}
+
+@media print {
+  @page {
+    margin: 0.5in;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11pt;
+    line-height: var(--line-height-normal);
+  }
+
+  nav,
+  footer,
+  button {
+    display: none;
+  }
+
+  main,
+  .item,
+  .contact-info, 
+  #skills {
+    width: var(--width-lg);
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    font-weight: normal;
+    color: #000000;
+  }
+
+  a[href^="mailto:"]::after,
+  a[href^="tel:"]::after {
+    content: "";
+  }
+
+  .contact-info,
+  .item,
+  #skills {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .item, .skill-category {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
 }

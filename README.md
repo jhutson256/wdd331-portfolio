@@ -136,7 +136,9 @@ This site uses the Anton font from Google Fonts. The typography tokens can be fo
 │         └── OFL.txt  
 ├── node_modules/
 ├── .gitignore
-├── package.json            
+├── package.json   
+├── resume.html
+├── contact.html          
 ├── index.html                      
 └── README.md   
 ```                    
