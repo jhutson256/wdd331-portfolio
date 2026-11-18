@@ -86,6 +86,7 @@
   h1, h2, h3 {
     break-after: avoid;
     page-break-after: avoid;
+    font-family: Georgia, "Times New Roman", serif;
   }
 
   p, li {
