@@ -45,17 +45,12 @@ html {
     --color-text: light-dark(var(--seed-text), oklch(0.88 0.02 260));
     --color-text-muted: light-dark(var(--seed-text-muted), oklch(0.68 0.03 250));
     --color-accent: light-dark(var(--seed-accent), oklch(0.62 0.15 240));
-    --color-accent-hover: light-dark(var(--seed-accent-hover), oklch(0.68 0.18 240));
-    --color-link: light-dark(var(--seed-link), oklch(0.65 0.16 240));
-    --color-link-hover: light-dark(var(--seed-link-hover), oklch(0.72 0.18 240));
     --color-border: light-dark(var(--seed-border), oklch(0.32 0.02 260));
-    --color-border-strong: light-dark(var(--seed-border-strong), oklch(0.38 0.02 260));
 
     /* Tint the native checkboxes, radios, and range sliders */
     accent-color: var(--color-accent);
 
     /* ---- Header chrome ---- */
-    --header-bg: var(--color-accent);
     --header-text: light-dark(#ffffff, #f0f4f8);
 
     /* ---- Theme toggle (consumed by theme-toggle.css) ---- */
