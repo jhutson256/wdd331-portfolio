@@ -13,6 +13,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: var(--font-size-display);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
 }
 
 h2 {
@@ -28,5 +30,5 @@ h4, h5, h6 {
 }
 
 p, a, h3 {
-    color: var(--color-bg);
+    color: var(--color-text);
 }

@@ -16,11 +16,18 @@ every push to main.
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
+- [@scope Demo](unit-2/demo/index.html)
 - [Visual Effects](unit-3/visual-effects/index.html)
 - [Grid Layouts - Cards](unit-4/grid-layouts/cards.html)
 - [Grid Layouts - Editorial](unit-4/grid-layouts/editorial.html)
 - [Grid Layouts Advanced - Container](unit-4/advanced/container-demo.html)
 - [Grid Layouts Advanced - Sticky](unit-4/advanced/sticky-demo.html)
+- [Anchor Positioning Demo](unit-4/demo/demo.html)
+- [Contact Visibility Demo](unit-5/content-visibility/index.html)
+- [Resume](./resume.html)
+- [Contact](./contact.html)
+- [Motion](unit-6/motion/index.html)
+- [Reimagined Home](unit-7/reimagined-home/index.html)
 
 ## Bundler
 
@@ -49,6 +56,9 @@ This site uses the Anton font from Google Fonts. The typography tokens can be fo
 │   ├── components/
 │   │   ├── video-cards.css
 │   │   ├── effects.css
+│   │   ├── contacts.css
+│   │   ├── resume.css
+│   │   ├── motion.css
 │   │   └── theme-toggle.css  
 │   ├── layout/
 │   │   └── layout.css
@@ -85,7 +95,7 @@ This site uses the Anton font from Google Fonts. The typography tokens can be fo
 │           ├── utilities/
 │           │   └── utilities.css     
 │           └── main.css
-    └── css-bundling/
+│   └── css-bundling/
 │       ├── index.html
 │       └── css/
 |         │   ├── base/
@@ -109,7 +119,7 @@ This site uses the Anton font from Google Fonts. The typography tokens can be fo
 |         ├── .gitignore
 |         ├── index.html
 |         └── package.json   
-    └── demo/
+│   └── demo/
 │         ├── index.html                  
 │         └── styles.css  
 ├── unit-3/
@@ -124,13 +134,25 @@ This site uses the Anton font from Google Fonts. The typography tokens can be fo
 │       ├── container-demo.css 
 │       ├── sticky-demo.html   
 │       └── sticky-demo.css  
-    └── demo/
+│   └── demo/
 │       ├── demo.html   
-│       └── demo.css                   
+│       └── demo.css 
+├── unit-5/
+│   └── content-visibility/
+│       ├── index.html
+│       └── css/
+|         └── main.css  
+├── unit-6/
+│   └── motion/
+│       ├── index.html
+│       └── motion.css     
+├── unit-7/
+│   └── reimagined-home/
+│       └── index.html      
 ├── dist/
 │   └── styles.css
 ├── fonts/
-    └── Anton/
+│   └── Anton/
 │         ├── Anton/Anton-Regular.subset.ttf    
 │         ├── Anton/Anton-Regular.ttf              
 │         └── OFL.txt  
